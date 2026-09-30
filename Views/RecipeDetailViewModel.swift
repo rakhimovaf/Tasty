@@ -34,8 +34,7 @@ final class RecipeDetailViewModel: ObservableObject {
     
     static func saveRecipe(_ recipe: SavedRecipe) {
         var recipes = getSavedRecipes()
-        
-        // Agar oldin saqlangan bo'lsa, yana qo'shmaymiz
+
         guard !recipes.contains(where: { $0.id == recipe.id }) else {
             return
         }
