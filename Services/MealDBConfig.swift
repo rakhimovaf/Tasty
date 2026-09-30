@@ -123,10 +123,10 @@ enum MealDBError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidURL: return "Noto'g'ri so'rov manzili."
-        case .notFound: return "Nothing found"
-        case .decoding: return "Ma'lumotni o'qishda xatolik."
-        case .network(let error): return "Tarmoq xatosi: \(error.localizedDescription)"
+        case .invalidURL: return "Invalid request URL."
+        case .notFound: return "Nothing found."
+        case .decoding: return "Failed to decode data."
+        case .network(let error): return "Network error: \(error.localizedDescription)"
         }
     }
 }
