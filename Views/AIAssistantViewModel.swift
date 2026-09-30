@@ -102,10 +102,10 @@ enum AIRecipeError: LocalizedError {
 
     case unavailable
 
-    var errorDescription: String? {
-        switch self {
-        case .unavailable:
-            return "Apple Intelligence hozir mavjud emas."
-        }
+   var errorDescription: String? {
+    switch self {
+    case .unavailable:
+        return "Apple Intelligence is currently unavailable."
     }
+   }
 }
