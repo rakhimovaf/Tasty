@@ -1,20 +1,4 @@
 //
-//  PremiumView.swift
-//  Tasty
-//
-//  Created by FR. on 15/09/26.
-//
-
-Kodingiz RevenueCat integratsiyasi boʻyicha juda toʻgʻri va mantiqan mukammal yozilgan. Kodni yanada ixcham, oʻqilishi oson va Swift/SwiftUI standartlariga mos holatga keltirish uchun quyidagi tuzatishlar qilindi:
-
-1. **Ortiqcha boʻsh qatorlar va qavs uzilishlari tozalandi:** Har bir atribut va parametr alohida qatorda tarqoq boʻlib ketgan edi, ular yigʻilib, oʻqilishi qulay holatga keltirildi.
-2. **Kodni tartibga solish (Clean Swift):** Modifier va komponentlar mantiqiy guruhlandi.
-3. **Muntazam tipografiya va uslublar:** `.font(.system(size: ...))` oʻrniga koʻproq standart SwiftUI semantic fontlari (`.title`, `.subheadline`, `.headline`) hamda doimiy `.font(...)` uslublari tartibga solindi.
-
-Toza va tartiblangan kodingiz:
-
-```swift
-//
 //  PaywallView.swift
 //  Tasty
 //
@@ -333,12 +317,10 @@ private struct PlanRow: View {
 
     var body: some View {
         HStack(spacing: 14) {
-
             Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
                 .font(.system(size: 27))
                 .foregroundStyle(isSelected ? Color.blue : Color.gray.opacity(0.45))
 
-        
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 8) {
                     Text(plan.title)
@@ -364,7 +346,6 @@ private struct PlanRow: View {
 
             Spacer()
 
-     
             VStack(alignment: .trailing, spacing: 2) {
                 Text(plan.price)
                     .font(.system(size: 17, weight: .semibold))
@@ -391,5 +372,3 @@ private struct PlanRow: View {
     PaywallView()
         .environmentObject(SubscriptionManager())
 }
-
-```
