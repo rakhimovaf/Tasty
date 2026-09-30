@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84AA1789306ABB2800E9BE87 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 84AA1788306ABB2800E9BE87 /* RevenueCat */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8403C8BC301A7B2300992201 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -45,6 +49,16 @@
 			path = TastyUITests;
 			sourceTree = "<group>";
 		};
+		84AA178D306B957D00E9BE87 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84AA179C306B958A00E9BE87 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AA1789306ABB2800E9BE87 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				8403C8AE301A7B2000992201 /* Tasty */,
+				84AA179C306B958A00E9BE87 /* Views */,
+				84AA178D306B957D00E9BE87 /* Services */,
 				8403C8BE301A7B2300992201 /* TastyTests */,
 				8403C8C8301A7B2300992201 /* TastyUITests */,
 				8403C8AD301A7B2000992201 /* Products */,
@@ -109,9 +126,12 @@
 			);
 			fileSystemSynchronizedGroups = (
 				8403C8AE301A7B2000992201 /* Tasty */,
+				84AA178D306B957D00E9BE87 /* Services */,
+				84AA179C306B958A00E9BE87 /* Views */,
 			);
 			name = Tasty;
 			packageProductDependencies = (
+				84AA1788306ABB2800E9BE87 /* RevenueCat */,
 			);
 			productName = Tasty;
 			productReference = 8403C8AC301A7B2000992201 /* Tasty.app */;
@@ -171,7 +191,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2650;
-				LastUpgradeCheck = 2650;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					8403C8AB301A7B2000992201 = {
 						CreatedOnToolsVersion = 26.5;
@@ -195,6 +215,9 @@
 			);
 			mainGroup = 8403C8A3301A7B2000992201;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84AA1787306ABB2800E9BE87 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8403C8AD301A7B2000992201 /* Products */;
 			projectDirPath = "";
@@ -327,6 +350,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -383,6 +407,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -397,6 +422,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_AI_SERVICE_URL = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +454,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_AI_SERVICE_URL = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84AA1787306ABB2800E9BE87 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.91.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84AA1788306ABB2800E9BE87 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84AA1787306ABB2800E9BE87 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8403C8A4301A7B2000992201 /* Project object */;
 }
