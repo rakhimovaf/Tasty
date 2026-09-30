@@ -59,7 +59,7 @@ struct TastyApp: App {
                     }
                 }
             }
-            .environmentObject(subscriptionManager) // Attaching here supplies SubscriptionManager to BOTH views
+            .environmentObject(subscriptionManager) 
         }
         .modelContainer(sharedModelContainer)
     }
