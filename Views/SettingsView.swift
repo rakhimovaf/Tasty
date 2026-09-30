@@ -53,7 +53,7 @@ struct SettingsView: View {
                     .padding(.vertical, 4)
                     .staggeredAppear(0)
 
-                    // Premium button
+               
                     if !isPremium {
                         Button {
                             showingPaywall = true
@@ -74,7 +74,7 @@ struct SettingsView: View {
                     }
                 }
 
-                // MARK: - Recipes
+
 
                 Section("Recipes") {
                     NavigationLink {
@@ -131,7 +131,6 @@ struct SettingsView: View {
 
             } else {
 
-                // Saved recipes list
                 List {
                     ForEach(Array(savedRecipes.enumerated()), id: \.element.id) { index, recipe in
 
@@ -197,7 +196,7 @@ struct SettingsView: View {
         }
     }
 
-    // MARK: - Load Saved Recipes
+
 
     private func loadSavedRecipes() {
         savedRecipes = RecipeDetailViewModel.getSavedRecipes()
